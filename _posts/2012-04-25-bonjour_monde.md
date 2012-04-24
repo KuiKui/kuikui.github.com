@@ -5,7 +5,7 @@ title: Bonjour le monde
 
 # {{ page.title }} #
 
-<span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>
+<span class="date post">{{ page.date | date: "%d/%m/%Y" }}</span>
 
 Cet article me permet de vérifier que tout fonctionne correctement sur ce nouveau blog.
 
