@@ -14,4 +14,4 @@ Bon, d'un autre coté c'est normal car son auteur [Tom Preston-Werner](http://to
 
 Concernant le thème, j'ai forké et simplifié celui du blog de [Jason Meridth](http://blog.jasonmeridth.com/), lui même inspiré du thème [Modernist](http://orderedlist.github.com/modernist/). 
 
-Je ferai bientôt un petit article sur l'installation d'un blog comme celui-ci, dans l'espoir de motiver mes amis de la [Team Fusion](http://team-fusion.pmsipilot.com/) à partager aussi leurs expériences ;-)
+Je ferai bientôt un petit article sur l'installation d'un blog comme celui-ci, dans l'espoir de motiver mes amis de l'ex-[Team Fusion](http://team-fusion.pmsipilot.com/) à partager eux aussi leurs expériences ;-)
