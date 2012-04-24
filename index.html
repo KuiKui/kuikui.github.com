@@ -2,18 +2,18 @@
 layout: default
 title: Denis Roussel
 ---
-<h1>Blog Posts</h1>
+<h1>Blog</h1>
 <ul class="posts">
   {% for post in site.posts %}
     <li><span class="date">{{ post.date | date: "%d/%m/%Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 
-<h1>Projects</h1>
+<h1>Projets</h1>
 <ul class="posts">
-  <li><a href="http://pmsipilot.github.com/Crew">Crew</a> &raquo; Code review tool for Git projects.</li>
-  <li><a href="http://pmsipilot.github.com/Baseboard">Baseboard</a> &raquo; Dashboard for Basecamp projects.</li>
-  <li><a href="http://KuiKui.github.com/Gitboard">Gitboard</a> &raquo; Simple dashboard for a quick overview of Git projects.</li>
-  <li><a href="http://stickdown.me">Stickdown.me</a> &raquo; Simple and unauthenticated online todo list.</li>
-  <li><a href="https://chrome.google.com/webstore/detail/blogaalpphinblmlnbeekgkckebgfpop">myTwitter</a> &raquo; Chrome extension that improves readability of your Twitter web timeline.</li>
+  <li><a href="http://pmsipilot.github.com/Crew">Crew</a> &raquo; Outil de revue de code pour les projets Git.</li>
+  <li><a href="http://pmsipilot.github.com/Baseboard">Baseboard</a> &raquo; Dashboard permettant de suivre l'avancement des projets Basecamp.</li>
+  <li><a href="http://KuiKui.github.com/Gitboard">Gitboard</a> &raquo; Aperçu rapide de l'état d'un projet Git en CLI.</li>
+  <li><a href="http://stickdown.me">Stickdown.me</a> &raquo; Service online de todo-list ne necéssitant pas d'authentification.</li>
+  <li><a href="https://chrome.google.com/webstore/detail/blogaalpphinblmlnbeekgkckebgfpop">myTwitter</a> &raquo; Extension Chrome améliorant la lisibilité de la timeline web de Twitter.</li>
 </ul>
