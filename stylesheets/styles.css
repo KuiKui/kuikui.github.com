@@ -282,6 +282,10 @@ footer p {
   float: right;
 }
 
+#disqus_thread {
+  margin-top: 50px;
+}
+
 @media print, screen and (max-width: 740px) {
   body {
     padding: 0;
@@ -314,9 +318,6 @@ footer p {
   footer p {
     float: none;
     margin: 0;
-  }
-  footer p + p {
-    float: none;
   }
 }
 @media print, screen and (max-width:580px) {
