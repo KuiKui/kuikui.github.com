@@ -1,4 +1,3 @@
-
 La nouvelle version [1.7.10](https://raw.github.com/gitster/git/master/Documentation/RelNotes/1.7.10.txt) de Git est sortie le 06/04/2012.  
 
 Je ne vais pas faire comme si j'avais compris toutes les améliorations disponibles, mais sachant qu'il est facile de [tester les dernière version de Git](http://denisroussel.fr/2012/04/26/tester_la_derniere_version_de_git.html), je vais simplement détailler les fonctionnalités qui me semblent avoir un intérêt direct pour mon utilisation régulière.
@@ -61,7 +60,7 @@ Effectivement, il y a une bonne blague dans cette nouvelle fonctionnalité : on 
 
 Facile.
 
-Donc après une petite excursion dans le code source de Git, il semblerait que 
+Non, c'est pas vrai. En fait il suffit d'ajouter l'option `--branch` 
 
 ## La description d'une branch
 
@@ -85,4 +84,4 @@ suivie de la saisie d'une description dans l'éditeur de texte qui s'ouvre autom
     [branch "nouvelle-feature"]
         description = Description plus complète de la feature
 
-Donc cela ne sert finalement pas à grand chose puisque cette information n'est pas contenu dans les méta data de la branch. C'est probablement pour cette raison que seule la commande `request-review` l'utilise actuellement.
+Donc cela ne sert finalement pas à grand chose puisque cette information n'est pas contenu dans les méta data de la branch. C'est probablement pour cette raison que seule la commande `request-pull` l'utilise actuellement (cette commande ne sort donc potentiellement pas la même chose selon le repository sur lequel elle est lancée).
