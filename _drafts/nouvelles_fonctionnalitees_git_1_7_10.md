@@ -56,11 +56,9 @@ D'autant plus que les résultats doivent probablement beaucoup varier d'un proje
 
 ### La blague
 
-Effectivement, il y a une bonne blague dans cette nouvelle fonctionnalité : on ne choisi pas la branch qui est clonée.
+Effectivement, il y a une bonne blague dans cette nouvelle fonctionnalité : on ne choisi pas la branch qui est clonée (d'après le changelog). Dommage.
 
-Facile.
-
-Non, c'est pas vrai. En fait il suffit d'ajouter l'option `--branch` 
+En fait il suffit d'ajouter l'option `--branch=la-branche-que-je-veux` à la suite de l'option `--single-branch`
 
 ## La description d'une branch
 
