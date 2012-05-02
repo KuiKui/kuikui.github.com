@@ -204,6 +204,13 @@ blockquote {
 
 img {
   max-width:100%;
+  box-shadow: 8px 8px 12px #aaa;
+  border: 15px solid #fff;
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1;
 }
 
 code, pre {
