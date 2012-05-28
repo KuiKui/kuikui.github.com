@@ -166,7 +166,7 @@ section {
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   color: #222;
   padding: 0;
   margin: 0 0 20px;
@@ -177,7 +177,7 @@ p, ul, ol, table, pre, dl {
   margin: 0 0 20px;
 }
 
-h1, h2, h3 {
+h1, h2 {
   line-height: 1.1;
 }
 
@@ -190,7 +190,11 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-  color: #494949;
+  color: #666;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 10px;
 }
 
 blockquote {
