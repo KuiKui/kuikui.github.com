@@ -1,5 +1,6 @@
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-30980175-1']);
+_gaq.push(['_setDomainName', 'denisroussel.fr']);
 _gaq.push(['_trackPageview']);
 (function() {
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
