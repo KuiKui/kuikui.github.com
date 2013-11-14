@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>HTTPArchive et Big Query for fun</title>
+    <meta charset='utf-8'>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawCharts);
+      function drawCharts() {
+        var data = google.visualization.arrayToDataTable([
+          ['Sites', 'PageSpeed Score'],
+          ['boursorama.com',  93],
+          ['ouest-france.fr', 88],
+          ['m6.fr',           87],
+          ['leparisien.fr',   81],
+          ['20minutes.fr',    81],
+          ['mediapart.fr',    80],
+          ['lexpress.fr',     76]
+        ]);
+
+        var chart = new google.visualization.BarChart(document.getElementById('pageSpeed'));
+        chart.draw(data, {title: 'PageSpeed Score'});
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sites', 'Total Transfer Size (kb)'],
+          ['boursorama.com',  879],
+          ['m6.fr',           2033],
+          ['leparisien.fr',   2138],
+          ['ouest-france.fr', 2338],
+          ['lexpress.fr',     2347],
+          ['mediapart.fr',    2574],
+          ['20minutes.fr',    2586]
+        ]);
+
+        var chart = new google.visualization.BarChart(document.getElementById('totalTransferSize'));
+        chart.draw(data, {title: 'Total Transfer Size (kb)'});
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sites', 'Total Requests'],
+          ['mediapart.fr',    79],
+          ['boursorama.com',  107],
+          ['m6.fr',           122],
+          ['lexpress.fr',     226],
+          ['ouest-france.fr', 264],
+          ['20minutes.fr',    309],
+          ['leparisien.fr',   319]
+        ]);
+
+        var chart = new google.visualization.BarChart(document.getElementById('totalRequests'));
+        chart.draw(data, {title: 'Total Requests'});
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sites', 'gzip Savings (% of Total Transfer Size)'],
+          ['m6.fr',           10.2],
+          ['lexpress.fr',     4.4],
+          ['20minutes.fr',    3.8],
+          ['ouest-france.fr', 3.6],
+          ['boursorama.com',  1.1],
+          ['leparisien.fr',   0.8],
+          ['mediapart.fr',    0.2]
+        ]);
+
+        var chart = new google.visualization.BarChart(document.getElementById('gzipSavings'));
+        chart.draw(data, {title: 'gzip Savings (% of Total Transfer Size)'});
+      }
+    </script>
+  </head>
+  <body>
+    <p>Suite à la <a href="http://youtu.be/bhUMHKJf3r4" title="HTTP Archive, BigQuery, and you!">présentation d'Ilya Grigorik à la Velocity</a>, voici une petite mise en pratique très simple : la comparaison, sur quelques indicateurs, des sites dont nous avons croisés les responsables technique français aujourd'hui.</p>
+    <p>La requête exécutée sur <a href="https://bigquery.cloud.google.com/" title="Google BigQuery">Google BigQuery</a> est du style :</p>
+    <pre style="background-color: #EEE;">SELECT url, PageSpeed, bytesTotal, bytesImg, reqTotal, gzipSavings, round((gzipSavings/bytesTotal) * 100, 1) as percent
+FROM [httparchive:runs.latest_pages]
+WHERE REGEXP_MATCH(url, r'\.m6\.fr|lexpress\.fr|boursorama\.com|20minutes\.fr|mediapart\.fr|ouest-france\.fr|leparisien\.fr')</pre>
+    <p>Ensuite, <a href="https://developers.google.com/chart" title="Google Charts">Google Charts</a> met tout ça en forme :</p>
+    <div id="pageSpeed" style="width: 600px; height: 300px; float:left"></div>
+    <div id="totalRequests" style="width: 600px; height: 300px; float:left"></div>
+    <div id="totalTransferSize" style="width: 600px; height: 300px; float:left"></div>
+    <div id="gzipSavings" style="width: 600px; height: 300px; float:left"></div>
+    <p style="clear:both;">Pour me traiter, c'est là : <a href="https://twitter.com/dondouny" title="Twitter">@dondouny</a> ;-)</p>
+  </body>
+</html>
