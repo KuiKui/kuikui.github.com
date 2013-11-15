@@ -66,7 +66,7 @@
     </script>
   </head>
   <body>
-    <p>Suite à la <a href="http://youtu.be/bhUMHKJf3r4" title="HTTP Archive, BigQuery, and you!">présentation d'Ilya Grigorik à la Velocity</a>, voici une petite mise en pratique très simple : la comparaison, sur quelques indicateurs, des sites dont nous avons croisés les responsables technique français aujourd'hui.</p>
+    <p>Suite à la <a href="http://youtu.be/bhUMHKJf3r4" title="HTTP Archive, BigQuery, and you!">présentation d'Ilya Grigorik à la Velocity</a>, voici une petite mise en pratique très simple : la comparaison, sur quelques indicateurs, des sites dont nous avons croisés les responsables techniques français aujourd'hui.</p>
     <p>La requête exécutée sur <a href="https://bigquery.cloud.google.com/" title="Google BigQuery">Google BigQuery</a> est du style :</p>
     <pre style="background-color: #EEE;">SELECT url, PageSpeed, bytesTotal, bytesImg, reqTotal, gzipSavings, round((gzipSavings/bytesTotal) * 100, 1) as percent
 FROM [httparchive:runs.latest_pages]
